@@ -10,7 +10,7 @@ begin
     gem.email = "vinicius@improveit.com.br"
     gem.homepage = "http://github.com/viniciusteles/arrayextension"
     gem.authors = ["Vinicius Teles"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "rspec", ">= 1.2.8"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
