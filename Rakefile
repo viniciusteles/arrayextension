@@ -5,13 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "arrayextension"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = "This gem extends the Ruby class Array with a few useful methods."
+    gem.description = "This gem extends the Ruby class Array with a few useful methods. Just a bit of sugar."
     gem.email = "vinicius@improveit.com.br"
     gem.homepage = "http://github.com/viniciusteles/arrayextension"
     gem.authors = ["Vinicius Teles"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
