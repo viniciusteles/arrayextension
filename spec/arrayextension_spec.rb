@@ -49,4 +49,28 @@ describe Array do
     
   end
 
+  describe ".to_symbols" do
+    
+    it "should be a empty array when a empty string" do
+      [].to_symbols.should == []
+    end
+    
+    it "should ignore nil items" do
+      [nil].to_symbols.should == []
+    end
+    
+    it "should return all elements in symbol for string elements" do
+      %w(collect map sort reverse).to_symbols.should == [:collect, :map, :sort, :reverse]
+    end
+    
+    it "should return all elements in symbol for Fixnum elements" do
+      [1,2,3,4,5].to_symbols.should == [:"1", :"2", :"3", :"4", :"5"]
+    end
+    
+    it "should return all elements in symbol for Range elements" do
+      [(1..5), (6..10)].to_symbols.should == [:"1..5", :"6..10"]
+    end
+    
+  end
+
 end

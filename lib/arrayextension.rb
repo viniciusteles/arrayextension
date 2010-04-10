@@ -2,6 +2,15 @@
 #
 class Array
   
+  # Returns an array of symbols corresponding to the element in the array
+  #
+  #  [].to_symbols         #=> []
+  #  %w(collect map sort)  #=> [:collect, :map, :sort]
+  #  [1,2,3,4,5]           #=> [:"1", :"2", :"3", :"4", :"5"]
+  def to_symbols
+    self.compact.collect {|element| element.to_s.to_sym }
+  end
+  
   # Returns a string created by converting each element of the array to a string, separated by \n
   #
   #   [].join_cr                  #=> ""
