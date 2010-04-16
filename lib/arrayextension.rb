@@ -2,11 +2,13 @@
 #
 class Array
   
-  # Returns an array of symbols corresponding to the element in the array
+  # Returns an array of symbols corresponding to the elements in the array
   #
-  #  [].to_symbols         #=> []
-  #  %w(collect map sort)  #=> [:collect, :map, :sort]
-  #  [1,2,3,4,5]           #=> [:"1", :"2", :"3", :"4", :"5"]
+  #  [].to_symbols                    # =>  []
+  #  %w(collect map sort).to_symbols  # =>  [:collect, :map, :sort]
+  #  [1,2,3,4,5].to_symbols           # =>  [:"1", :"2", :"3", :"4", :"5"]
+  #  ['1', nil].to_symbols            # =>  [:'1']
+  #
   def to_symbols
     self.compact.collect {|element| element.to_s.to_sym }
   end
