@@ -36,6 +36,15 @@ class Array
     (1..number_of_elements).to_a.map { random_element }
   end  
   
+  # Return true if element is not include in the list
+  #
+  # [].not_include?(1)  # => true
+  # [1].not_include?(1) # => false
+  #
+  def not_include?(element)
+    !self.include?(element)
+  end
+  
   private
   
     def random_element

@@ -73,4 +73,24 @@ describe Array do
     
   end
 
+  describe '.not_include?' do
+    
+    it "should return false if included in the array" do
+      [1].not_include?(1).should be_false
+    end
+   
+    it "should return false for the true element in the array" do
+      [true].not_include?(true).should be_false
+    end
+    
+    it "should return true if element is not include in the array" do
+      [1,2,3].not_include?(4).should be_true
+    end
+    
+    it "should return true if element nin is not include in the array" do
+      [true, false].not_include?(nil).should be_true
+    end
+    
+  end
+
 end
