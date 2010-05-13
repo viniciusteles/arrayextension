@@ -51,7 +51,7 @@ describe Array do
 
   describe ".to_symbols" do
     
-    it "should be a empty array when a empty string" do
+    it "should be an empty array when an empty string is given" do
       [].to_symbols.should == []
     end
     
@@ -59,15 +59,15 @@ describe Array do
       [nil].to_symbols.should == []
     end
     
-    it "should return all elements in symbol for string elements" do
+    it "should return all elements as Symbol for when Strings are given" do
       %w(collect map sort reverse).to_symbols.should == [:collect, :map, :sort, :reverse]
     end
     
-    it "should return all elements in symbol for Fixnum elements" do
+    it "should return all elements as Symbol when Fixnums are given" do
       [1,2,3,4,5].to_symbols.should == [:"1", :"2", :"3", :"4", :"5"]
     end
     
-    it "should return all elements in symbol for Range elements" do
+    it "should return all elements as Symbol when Ranges are given" do
       [(1..5), (6..10)].to_symbols.should == [:"1..5", :"6..10"]
     end
     
@@ -83,11 +83,11 @@ describe Array do
       [true].not_include?(true).should be_false
     end
     
-    it "should return true if element is not include in the array" do
+    it "should return true if element is not included in the array" do
       [1,2,3].not_include?(4).should be_true
     end
     
-    it "should return true if element nin is not include in the array" do
+    it "should return true if element nil is not included in the array" do
       [true, false].not_include?(nil).should be_true
     end
     
