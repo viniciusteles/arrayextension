@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    arrayextension (0.2.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    rspec (1.3.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  arrayextension!
+  rspec (>= 1.2.8)
